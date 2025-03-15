@@ -45,20 +45,20 @@ node ace athc [options]
 
 ### 🔧 Options disponibles
 
-| Option                          | Description                                                         |
-| ------------------------------- | ------------------------------------------------------------------- |
-| `-f, --file [FILE]`             | Chemin absolu ou relatif du fichier `.xlsx` à traiter.              |
-| `-b, --batch [BATCH]`           | Nombre de lignes insérées par requête SQL (défaut : `100`).         |
-| `-t, --thread [THREAD]`         | Nombre de threads utilisés (défaut : `11`).                         |
-| `-c, --concurrent [CONCURRENT]` | Nombre de tâches concurrentes (défaut : `4`).                       |
-| `-h, --host [HOST]`             | Hôte du serveur PostgreSQL.                                         |
-| `-p, --port [PORT]`             | Port du serveur PostgreSQL.                                         |
-| `-u, --user [USER]`             | Utilisateur du serveur PostgreSQL.                                  |
-| `-w, --password [PASSWORD]`     | Mot de passe du serveur PostgreSQL.                                 |
-| `-d, --database [DATABASE]`     | Nom de la base de données PostgreSQL.                               |
-| `-l, --location [LOCATION]`     | Chemin du fichier SQLite.                                           |
-| `-v, --verbose`                 | Mode verbeux pour afficher les actions en cours (défaut : `false`). |
-| `--help`                        | Affiche l'aide et les options disponibles.                          |
+| Option                          | Description                                                               |
+| ------------------------------- | ------------------------------------------------------------------------- |
+| `-f, --file [FILE]`             | Chemin absolu ou relatif du fichier `.xlsx` à traiter.                    |
+| `-b, --batch [BATCH]`           | Nombre de lignes insérées par requête SQL (défaut : `100`).               |
+| `-t, --thread [THREAD]`         | Nombre de threads utilisés (défaut : `Nombre de threads du système - 1`). |
+| `-c, --concurrent [CONCURRENT]` | Nombre de tâches concurrentes (défaut : `4`).                             |
+| `-h, --host [HOST]`             | Hôte du serveur PostgreSQL.                                               |
+| `-p, --port [PORT]`             | Port du serveur PostgreSQL.                                               |
+| `-u, --user [USER]`             | Utilisateur du serveur PostgreSQL.                                        |
+| `-w, --password [PASSWORD]`     | Mot de passe du serveur PostgreSQL.                                       |
+| `-d, --database [DATABASE]`     | Nom de la base de données PostgreSQL.                                     |
+| `-l, --location [LOCATION]`     | Chemin du fichier SQLite.                                                 |
+| `-v, --verbose`                 | Mode verbeux pour afficher les actions en cours (défaut : `false`).       |
+| `--help`                        | Affiche l'aide et les options disponibles.                                |
 
 ---
 
