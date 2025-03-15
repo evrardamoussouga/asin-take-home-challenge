@@ -33,6 +33,7 @@ chmod +x uninstall.sh
 ## ⚠️ Mise en garde
 
 Si la commande est utilisée à partir d'une installation, il est **obligatoire** d'indiquer l'option `--location` (ou `-l`) pour spécifier la localisation du fichier SQLite.
+Vous devrez également omettre « node ace » et commencer la commande par « athc ».
 
 ---
 
