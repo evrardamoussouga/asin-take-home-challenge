@@ -132,7 +132,7 @@ node ace athc --batch 500 < ./people_sample.xlsx
 node ace athc -b 500 < ./people_sample.xlsx
 ```
 
-- **Ajuster le nombre de threads** (par défaut : `11`)
+- **Ajuster le nombre de threads** (par défaut : `Nombre de threads du système - 1`)
 
 ```sh
 node ace athc --thread 12 < ./people_sample.xlsx
