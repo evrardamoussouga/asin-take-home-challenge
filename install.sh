@@ -1,8 +1,25 @@
 #!/bin/bash
 
+# Fonction pour vérifier la version de Node.js
+check_node_version() {
+  REQUIRED_VERSION="v20.10.0"
+  CURRENT_VERSION=$(node -v)
+
+  if [ "$(printf '%s\n' "$REQUIRED_VERSION" "$CURRENT_VERSION" | sort -V | head -n1)" != "$REQUIRED_VERSION" ]; then
+    echo "La version de Node.js actuelle ($CURRENT_VERSION) est inférieure à la version requise ($REQUIRED_VERSION). Mise à jour en cours..."
+    sudo apt install -y nodejs
+  else
+    echo "La version de Node.js ($CURRENT_VERSION) est suffisante."
+  fi
+}
+
 # Met à jour le système et installe les dépendances nécessaires
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y curl git nodejs npm
+
+
+# Vérifie la version de Node.js
+check_node_version
 
 # Définition des chemins
 INSTALL_DIR="/opt/athc"
