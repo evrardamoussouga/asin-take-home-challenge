@@ -1,6 +1,12 @@
 import env from '#start/env'
-import app from '@adonisjs/core/services/app'
+//import app from '@adonisjs/core/services/app'
 import { defineConfig } from '@adonisjs/lucid'
+
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 const dbConfig = defineConfig({
   connection: 'sqlite',
@@ -8,7 +14,7 @@ const dbConfig = defineConfig({
     sqlite: {
       client: 'better-sqlite3',
       connection: {
-        filename: app.tmpPath('db.sqlite3'),
+        filename: path.join(__dirname, '~/db.sqlite3'),
       },
       useNullAsDefault: true,
       migrations: {

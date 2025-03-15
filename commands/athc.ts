@@ -232,7 +232,7 @@ export default class Athc extends BaseCommand {
       ? path.isAbsolute(this.location)
         ? this.location
         : path.join(process.cwd(), this.location)
-      : app.tmpPath('db.sqlite3')
+      : path.join(process.cwd(), './db.sqlite3')
 
     const dbConfig = usePostgreSQL
       ? defineConfig({

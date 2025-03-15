@@ -50,7 +50,7 @@ export default async function workerTask(payload) {
     ? path.isAbsolute(payload?.sqlite?.location)
       ? payload?.sqlite?.location
       : path.join(payload.cwd, payload?.sqlite?.location)
-    : path.join(__dirname, '../tmp/db.sqlite3')
+    : path.join(process.cwd(), './db.sqlite3')
 
   const dbConfig = payload?.postgreSQL?.usePostgreSQL
     ? defineConfig({

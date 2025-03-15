@@ -22,6 +22,7 @@ npm run build
 
 # Déplace les fichiers nécessaires dans /opt/
 sudo mv /tmp/asin-take-home-challenge $INSTALL_DIR
+sudo cp $INSTALL_DIR/start/worker.js $INSTALL_DIR/build/start/worker.js
 
 # Crée un script global pour exécuter la commande
 echo "#!/bin/bash" | sudo tee $COMMAND_PATH > /dev/null

@@ -11,14 +11,28 @@
 Pour installer la commande, exécutez :
 
 ```sh
+chmod +x install.sh
+```
+
+```sh
 ./install.sh
 ```
 
 Pour désinstaller la commande, exécutez :
 
 ```sh
+chmod +x uninstall.sh
+```
+
+```sh
 ./uninstall.sh
 ```
+
+---
+
+## ⚠️ Mise en garde
+
+Si la commande est utilisée à partir d'une installation, il est **obligatoire** d'indiquer l'option `--location` (ou `-l`) pour spécifier la localisation du fichier SQLite.
 
 ---
 

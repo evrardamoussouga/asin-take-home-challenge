@@ -4,7 +4,6 @@ import { exec as callbackExec } from 'child_process'
 import { promisify } from 'util'
 import { performance } from 'perf_hooks'
 import fs from 'fs'
-import app from '@adonisjs/core/services/app'
 import { Assert } from '@japa/assert'
 import path from 'path'
 import { fileURLToPath } from 'url'
@@ -68,7 +67,7 @@ test.group('Commands athc', (group) => {
   })
 
   group.each.teardown(async () => {
-    fs.unlink(app.tmpPath('db.sqlite3'), (err) => {
+    fs.unlink(path.join(process.cwd(), './db.sqlite3'), (err) => {
       if (err) {
         //console.error('Error deleting file:', err)
       } else {
@@ -84,7 +83,7 @@ test.group('Commands athc', (group) => {
   test('Make sure that the --help option displays help for the athc command', async ({
     assert,
   }) => {
-    await testCommandWithError(
+    await testCommand(
       'node ace athc --help',
       'Reads an .xlsx file and inserts data into a SQL database (SQLite or PostgreSQL) [ in `people` table ]',
       assert
