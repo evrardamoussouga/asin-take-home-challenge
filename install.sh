@@ -25,7 +25,7 @@ sudo mv /tmp/asin-take-home-challenge $INSTALL_DIR
 
 # Crée un script global pour exécuter la commande
 echo "#!/bin/bash" | sudo tee $COMMAND_PATH > /dev/null
-echo "node $INSTALL_DIR/ace athc \"\$@\"" | sudo tee -a $COMMAND_PATH > /dev/null
+echo "node $INSTALL_DIR/build/ace athc \"\$@\"" | sudo tee -a $COMMAND_PATH > /dev/null
 sudo chmod +x $COMMAND_PATH
 
 # Nettoie le dossier temporaire
